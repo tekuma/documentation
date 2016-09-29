@@ -7,4 +7,29 @@ Currently, the front-end interface exists. The back-end query framework still ne
 
 2. Old Fashioned way: Use AJAX or XMLHTTP to send requests to a formal server and do queries.
 
-3. The too-easy way: Use the firebase database as the art database, and iterate through the entire DB to do queries. 
+3. The too-easy way: Use the firebase database as the art database, and iterate through the entire DB to do queries.
+
+
+## The Tekuma artwork database
+
+### columns
+
+Each item is of the form
+
+    slug (TYPE): name of my pet slug or my friend's slug.
+
+where "slug" is the column name, TYPE is an SQL datatype that is recognized by
+MySQL, and any text after `:` is a description of intended content and usage.
+
+* artist ():
+* title ():
+* description ():
+* date_of_addition (): ...to Tekuma db.
+* artist_uid ():
+* artwork_uid ():
+* date_of_creation (): ...claimed by the artist.
+* tags ():
+* thumbnail_url ():
+* origin ():
+* reverse_lookup ():
+* META (TEXT):
