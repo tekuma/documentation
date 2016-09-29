@@ -32,15 +32,17 @@ Each item is of the form
 where "slug" is the column name, TYPE is an SQL datatype that is recognized by
 MySQL, and any text after `:` is a description of intended content and usage.
 
-* artist ():
-* title ():
-* description ():
-* date_of_addition (): ...to Tekuma db.
-* artist_uid ():
-* artwork_uid ():
-* date_of_creation (): ...claimed by the artist.
-* tags ():
-* thumbnail_url ():
-* origin ():
-* reverse_lookup ():
-* META (TEXT):
+* artist (TEXT):
+* title (TEXT):
+* description (TEXT):
+* date_of_addition (DATETIME): ...to Tekuma db.
+* artist_uid (CHAR(255)):
+* artwork_uid (CHAR(255)):
+* date_of_creation (DATETIME): ...claimed by the artist.
+* tags (TEXT):
+* thumbnail_url (CHAR(255)): valid URL for obtaining a thumbnail image, or "null" if not available or not known.
+* origin (CHAR(32)): provider of the image. This must be one of several known strings:
+  - "portal-source" (obtained directly from artist to Tekuma)
+  - "art.com"
+* reverse_lookup (CHAR(255)): unique identifier from Tekuma's perspective of data from outside providers. E.g., for the origin "art.com", the SKU is used for unique references.
+* META (TEXT): data not otherwise specified.
