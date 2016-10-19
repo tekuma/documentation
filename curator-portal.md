@@ -23,6 +23,13 @@ through the entire DB to do queries.
 
 ## The Tekuma artwork database
 
+The ambition of this section is to document current and proposed designs of the
+Tekuma artwork database. At the time of writing, the overall system is simple: a
+single CloudSQL database (from provider cloud.google.com) that presents as MySQL
+and thus is a relational database. The columns are described below. The basic
+workflow for changing the database is to, before anything else, make replica and
+create back-ups off-site from Google Cloud.
+
 ### columns
 
 Each item is of the form
