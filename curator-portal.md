@@ -32,6 +32,9 @@ The basic workflow for changing the database is to, before anything else, make
 replica and create back-ups off-site from Google Cloud. Then, start a new
 CloudSQL instance, and create a table that has columns as desired. Populate the
 database, e.g., using an import program that maps rows from previous databases.
+Next, deploy the back-end code with configuration to point to a read-only
+replica of the previous database. Move the new database to the production
+location, and finally update the configuration of the back-end to use it.
 
 ### columns
 
