@@ -1,5 +1,9 @@
 # Historical notes: Curator portal
 
+Notes here concern earlier discussion about designs. Decisions have been
+reached, but the notes might be useful to keep available.  There might be
+out-of-date verb tenses (e.g., present vs. future).
+
 ## Possible Developmental Plans
 
 Currently, the front-end interface exists. The back-end query framework still
