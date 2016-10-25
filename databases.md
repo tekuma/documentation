@@ -2,7 +2,7 @@
 
 ## Terminology
 
-Two database types are currently employed:
+Two types of database are currently employed:
 
 * Firebase (https://firebase.google.com/docs/database/) JSON-oriented, and
 
