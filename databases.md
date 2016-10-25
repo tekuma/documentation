@@ -37,3 +37,31 @@ relational and provided as a CloudSQL instance. The tables are as follows:
 4. associations - pairs of labels and artworks, or labels and artists, together
    with annotation about the claimed relationship, e.g., when it was decided and
    whether some third-party service (e.g., Clarif.ai) determined it.
+
+
+## Management and interpretation of labels
+
+Key design considerations for supporting labels of artworks include:
+
+* ability to scale, i.e., maintain good performance while having and adding
+  large quantities of labels;
+
+* flexibility of types of labels, e.g., support for colors and geographic names,
+  and appropriate numeric and string representations for each;
+
+* tools for working with particular types of labels, e.g., finding
+  geographically proximal locations or finding nearby colors.
+
+Several ideas of themes for labels include:
+* color
+* artist names, collection names, geo-themed tags (or locations, e.g., "Boston")
+
+A row of the `labels` table would have the form:
+
+    label type | label value | origin (e.g., "Clarif.ai", "Scott from Tekuma") | insertion date
+
+Each label has a type. Types are described in the next section.
+
+### Types
+
+* `dominant-color`: apply some filter, bin colors, select color of bin with largest count.
