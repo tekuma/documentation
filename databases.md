@@ -29,14 +29,19 @@ relational and provided as a CloudSQL instance. The tables are as follows:
    the perspective of Tekuma as a company. However, any artist with which Tekuma
    engages in contract should have a dedicated row in the `artists` table.
 
-3. labels - labels (also known as "tags" or "keywords") used to describe
-   artworks or artists. Note that labels in this table are separate from
-   particular artworks. Relationships among labels and entities that are labeled
-   are expressed in the `associations` table.
-
-4. associations - pairs of labels and artworks, or labels and artists, together
+3. associations - pairs of labels and artworks, or labels and artists, together
    with annotation about the claimed relationship, e.g., when it was decided and
    whether some third-party service (e.g., Clarif.ai) determined it.
+
+4. locations - labels that involve a geographic location, e.g., Boston.
+
+5. collections - labels that correspond to named collections of artwork.
+
+6. other labels (neither collection nor location labels, which already have
+   dedicated tables) used to describe artworks or artists. Note that labels in
+   this table and in tables that are dedicated to particular label types are
+   separate from particular artworks. Relationships among labels and entities
+   that are labeled are expressed in the `associations` table.
 
 
 ## Management and interpretation of labels
