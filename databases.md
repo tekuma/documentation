@@ -37,11 +37,16 @@ relational and provided as a CloudSQL instance. The tables are as follows:
 
 5. collections - labels that correspond to named collections of artwork.
 
-6. other labels (neither collection nor location labels, which already have
+6. labels (neither collection nor location labels, which already have
    dedicated tables) used to describe artworks or artists. Note that labels in
    this table and in tables that are dedicated to particular label types are
    separate from particular artworks. Relationships among labels and entities
    that are labeled are expressed in the `associations` table.
+
+### table: labels
+
+* object_table: the name of the table containing the object that is labeled;
+  e.g., "artworks" or "artists"
 
 
 ## Management and interpretation of labels
