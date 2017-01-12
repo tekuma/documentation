@@ -103,7 +103,7 @@ otherwise an object containing only the requested UID and `found: false` (e.g.,
     album: String
     date: String of the form YYYY-MM-DD  // date of uploading
     creation_year: Integer
-    thumbnail_url: String
+    thumbnail512_url: String
     tags: Array of Objects, each object has schema {
 	rgb_colors: Array of Integer triples
 	labels: Array of Strings
