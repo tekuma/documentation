@@ -43,10 +43,27 @@ relational and provided as a CloudSQL instance. The tables are as follows:
    separate from particular artworks. Relationships among labels and entities
    that are labeled are expressed in the `associations` table.
 
-### table: labels
+### table: associations
+
+* label_uid: UID of the label that is associated with some object.
+
+* object_uid: UID of the object to which the label is applied, e.g., artwork and
+  artist.
 
 * object_table: the name of the table containing the object that is labeled;
   e.g., "artworks" or "artists"
+
+
+### table: labels
+
+* uid: unique identifier for the label, comparable in role to the UIDs of
+  artworks and artists.
+
+* val: the value of the label. Interpretation depends on the `labeltype`.
+
+* labeltype: different types are listed below in the section Types. E.g., `dominant-color`
+
+* origin: text that summarizes whence the label.
 
 
 ## Management and interpretation of labels
@@ -75,3 +92,13 @@ Each label has a type. Types are described in the next section.
 ### Types
 
 * `dominant-color`: apply some filter, bin colors, select color of bin with largest count.
+
+* `clarifai-color-density': color obtained from Clarif.ai; this is originally
+  obtained as part of a list of colors, which is split into separate labels,
+  each with color value (6-digit base 16 number) and density (floating point
+  between 0 and 1).
+
+* `clarifai-text-tag`: text label obtained from Clarif.ai; this is orignally
+  obtained as part of a list of tags, which is split into separate labels. Tags
+  are given with "id" numbers, but these "id" seem to only indicate position in
+  the original list.
