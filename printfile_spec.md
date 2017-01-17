@@ -4,6 +4,12 @@
 A print file is comprised of the highest resolution image available, laid on
 top of a white boarder, with the artist's name and the tekuma logo underneath.
 
+-----------------
+### Manufacturers
+- theprintful : 
+- art.com :
+- Other: 
+
 ### Specificications of Print
 ##### Static
 The printfile's overall size must be:
