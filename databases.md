@@ -93,12 +93,12 @@ Each label has a type. Types are described in the next section.
 
 * `dominant-color`: apply some filter, bin colors, select color of bin with largest count.
 
-* `clarifai-color-density': color obtained from Clarif.ai; this is originally
+* `clarifai-color-density`: color obtained from Clarif.ai; this is originally
   obtained as part of a list of colors, which is split into separate labels,
   each with color value (6-digit base 16 number) and density (floating point
   between 0 and 1). E.g., "#9aa0a9 0.3855"
 
-* `clarifai-w3c-color-density': entirely similar to the label type
+* `clarifai-w3c-color-density`: entirely similar to the label type
   `clarifai-color-density` except that the color matches a W3C CSS named
   color. Presumably this is a best-fit provided by Clarif.ai.
 
