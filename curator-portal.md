@@ -106,7 +106,7 @@ otherwise an object containing only the requested UID and `found: false` (e.g.,
     creation_year: Integer
     thumbnail512_url: String
     tags: Array of Objects, each object has schema {
-	rgb_colors: Array of Integer triples
+	rgb_colors: Array of RGB integer triples  // each from [0, 255]
 	labels: Array of Strings
 	}
     }
