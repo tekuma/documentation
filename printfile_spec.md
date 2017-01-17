@@ -6,9 +6,11 @@ top of a white boarder, with the artist's name and the tekuma logo underneath.
 
 -----------------
 ### Manufacturers
-- theprintful : 
-- art.com :
-- Other: 
+| Company        | Site           | Sizes         |
+| :------------- | :------------- | :------------ |
+| ThePrintful    | https://www.theprintful.com/      | 8x11, 12x12, |
+| Art.com | https://art.com | n/a |
+
 
 ### Specificications of Print
 ##### Static
@@ -26,7 +28,7 @@ and must include:
 -----------------
 
 ### Aspect Ratios
-##### Artworks are mapped dynamically to a printfile aspect ratio 
+##### Artworks are mapped dynamically to a printfile aspect ratio
 The full size of the print is equal to the size of the white background that the
 art is imposed onto. Prints are available in (width:height) aspect ratios of:
 - 4:3
@@ -39,7 +41,7 @@ art is imposed onto. Prints are available in (width:height) aspect ratios of:
 --------------------
 
 ### Spacing
-##### Spacing changes dynamically with the size of artwork 
+##### Spacing changes dynamically with the size of artwork
 Three elements are centered horizontally on the white boarder.
 - artwork
 - name
@@ -49,17 +51,17 @@ The artwork should be aligned at center, vertically and horizontally.
 
 The ratio of width of the  artwork:boarder ->  3:4
 
-##### static 
+##### static
 The bottom of the artist's name and the top of the tekuma logo should be ____ pixels apart
 
 -----------------------
 ### The Label
 
-##### The size of the label (does | does not) change with the size of the artwork. 
+##### The size of the label (does | does not) change with the size of the artwork.
 
 the artist's name and tekuma logo comprise the 'Label' of the artwork.
 - the font used is Nexa Light
-- the font is _50_ pixels tall (X mm tall) 
+- the font is _50_ pixels tall (X mm tall)
 - the logo is a 75 pixel square
 - the label has a maximum width of 1800px
 - the label can be at max 400px tall
