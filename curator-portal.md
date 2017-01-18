@@ -68,7 +68,7 @@ correspond to the parts described above. E.g.,
     fields = {
 	title: "title",
 	artist: "artist's name",
-	color_list: [0xdeadbe, 0xeff00f, 0x66666]
+	w3c_color_list: [0xdeadbe, 0xeff00f, 0x66666]
     }
 
 NOTE: query and fields given are interpreted as conjunction. E.g., if `artist`
@@ -76,6 +76,16 @@ is the only defined element of `fields', then all matches from `query` must have
 artist name that matches fields.artist. Further note that "match" for TEXT type
 columns is currently interpreted as existence of substring, independently of
 lowercase or uppercase.
+
+### Interpretations of particular search fields
+
+Fields that have non-obvious interpretations are described here.
+
+* w3c_color_list: list of RGB colors, each of which is one of the
+  [W3C CSS colors](https://www.w3.org/TR/css3-color/). An artwork is said to
+  match this field if it has no labels about W3C colors, or if the intersection
+  of the set of given (query) colors and the set of W3C color labels of the
+  artwork is nonempty.
 
 
 ## Other parts of the artwork db API
@@ -106,7 +116,7 @@ otherwise an object containing only the requested UID and `found: false` (e.g.,
     creation_year: Integer
     thumbnail512_url: String
     tags: {
-	rgb_colors: Array of RGB integer triples  // each from [0, 255]
+	w3c_rgb_colors: Array of RGB integer triples  // each from [0, 255]
 	labels: Array of Strings
 	}
     }
