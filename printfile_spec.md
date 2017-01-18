@@ -9,11 +9,15 @@ top of a white boarder, with the artist's name and the tekuma logo underneath.
 | Company        | Site           | Sizes         |
 | :------------- | :------------- | :------------ |
 | ThePrintful    | https://www.theprintful.com/      | 8x11, 12x12, |
-| Art.com | https://art.com | n/a |
+| Art.com        | https://art.com | n/a           |
 
 
 ### Specificications of Print
 ##### Static
+The printfile must be of file type:
+- jpeg / jpg 
+- PDF  
+
 The printfile's overall size must be:
 - less than ___ Mb
 - minimum of ___ DPI/PPI
