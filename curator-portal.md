@@ -69,7 +69,7 @@ correspond to the parts described above. E.g.,
 	title: "My buddy Eva",
 	artist: "zeta",
 	color_list: [0xdeadbe, 0xeff00f, 0x66666],
-	tag_list: [{id: "1", text: "dog"}, {id: "2", text: "eye"}]
+	text_tag_list: [{id: "1", text: "dog"}, {id: "2", text: "eye"}]
     }
 
 NOTE: query and fields given are interpreted as conjunction. E.g., if `artist`
