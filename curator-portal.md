@@ -66,8 +66,8 @@ correspond to the parts described above. E.g.,
 
     query = "generic search string"
     fields = {
-	title: "title",
-	artist: "artist's name",
+	title: "My buddy Eva",
+	artist: "zeta",
 	color_list: [0xdeadbe, 0xeff00f, 0x66666],
 	tag_list: [{id: "1", text: "dog"}, {id: "2", text: "eye"}]
     }
