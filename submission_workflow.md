@@ -17,7 +17,7 @@ Daemons:
 - artist-daemon (handles image resizing, and adding submissions to the curator DB)
 - curator-daemon (handles moving data into the SQL database, and unlocking artist's artworks)
 
-
+--------------------------------------------
 
 1. An artist submits an artwork to tekuma
  - A copy of the artwork's JSON is copied from the artist DB to the curator DB's submissions branch
