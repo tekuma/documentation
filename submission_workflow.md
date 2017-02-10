@@ -34,5 +34,11 @@ Daemons:
 
 4. If the artwork was rejected, an immutable artwork remains in the artist's studio interface. The artist can also view the message from the curator on why their artwork was rejected, and the artist can re-upload and try again.
 
+### Design Considerations:
+As multiple curators can be reviewing artists concurrently, all changes to the data should be atomic. 
+To achieve this, all code used in the review/submission workflow should use firebase's `transaction()` method, rather than a setter method. `transaction()` is guranteed to be atomic. See [https://firebase.google.com/docs/reference/js/firebase.database.Reference#transaction](https://firebase.google.com/docs/reference/js/firebase.database.Reference#transaction)
+
+
+
 NOTE: When an artwork is held, this means that there is something wrong with its data. E.g., it has no story, its artist information is wrong, it has no tags or colors, etc. 
 BUT, if there is a problem with the artworks image file (resolution, quality, aspect ratio,etc), the artwork should be declined. There is no way for the artist to upload a new image inside of an existing artwork. 
